@@ -1,14 +1,40 @@
-\# NHANES BMI \& SBP analysis (2021-2023)
+# NHANES BMI & SBP Analysis (2021–2023)
 
+This repository contains scripts and a reproducible report that analyze the association between BMI and mean systolic blood pressure (SBP) among adults (>=20 years) using NHANES 2021–2023.
 
+## Contents
+- `NHANES_analysis_report.Rmd` — Complete reproducible R Markdown. Knit to PDF for the final report.
+- `Lab session week 5 (Class).R` — Week 5 scripts (BMI & SBP cleaning and visualization).
+- `Lab session week 6 (Class).R` — Week 6 scripts (education, race, BP trial reshaping).
+- `outputs/` — Generated figures and report (may be excluded from repo if large).
 
-This repo contains analysis code and a reproducible report for the association between BMI and mean systolic blood pressure (SBP) among adults (>=20) using NHANES 2021–2023.
+## Quick start (how to reproduce)
+1. Download the NHANES XPT files and place them in a local folder. Set `data_dir` at the top of `NHANES_analysis_report.Rmd` to that folder.
+   - Required files: `DEMO_L.XPT`, `BMX_L.XPT`, `BPXO_L.XPT`.
+2. Open the RMarkdown in RStudio and click Knit to produce the PDF report.
 
+Or from PowerShell / command line:
 
+```powershell
+# from project root
+Rscript -e "rmarkdown::render('C:/Users/Edison/Downloads/NHANES_analysis_report.Rmd', output_format='pdf_document')"
+```
 
-Files:
+## Data
+The required NHANES files (DEMO_L.XPT, BMX_L.XPT, BPXO_L.XPT) are included in this repository for convenience to reproduce the analysis. If you prefer to obtain them yourself, download the appropriate 2021–2023 files from the NHANES website and set `data_dir` at the top of `NHANES_analysis_report.Rmd`.
 
-\- `NHANES\_analysis\_report.Rmd` — complete reproducible R Markdown (knit to PDF).
+If you plan to host large data files in a Git repository, consider using Git LFS or an external storage location to avoid inflating the repo size.
+
+## Git / GitHub (quick instructions)
+1. Initialize repo and commit files:
+```powershell
+cd 'C:/Users/Edison/Downloads'
+git init
+---
+
+附註（中文簡述）:
+- 本倉庫為方便重現包含所需 NHANES 2021–2023 XPT 檔案；若您希望自行下載原始檔，請至 NHANES 官方網站下載並在 Rmd 頂部設定 `data_dir`。
+
 
 \- `Lab session week 5 (Class).R` — week 5 code.
 
