@@ -32,9 +32,6 @@ cd 'C:/Users/Edison/Downloads'
 git init
 ---
 
-附註（中文簡述）:
-- 本倉庫為方便重現包含所需 NHANES 2021–2023 XPT 檔案；若您希望自行下載原始檔，請至 NHANES 官方網站下載並在 Rmd 頂部設定 `data_dir`。
-
 
 \- `Lab session week 5 (Class).R` — week 5 code.
 
