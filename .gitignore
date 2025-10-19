@@ -1,0 +1,21 @@
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user
+.Ruserdata
+
+# raw NHANES data - DO NOT commit
+健康大數據分析作業資料/
+*.xpt
+*.XPT
+data/
+raw_data/
+
+# outputs (視情況是否要追蹤)
+outputs/*.png
+outputs/*.csv
+outputs/*.pdf
+
+# OS files
+Thumbs.db
+.DS_Store
